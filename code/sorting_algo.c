@@ -35,7 +35,7 @@ void	ft_sort_5(t_list **a, t_list **b)
 	int	size;
 	int	i;
 
-	ft_sorting(a);
+	indexing(a);
 	size = ft_lstsize(*a);
 	i = 0;
 	while (i < 2)
@@ -60,7 +60,7 @@ void	ft_sort(t_list **a, t_list **b)
 	int	len;
 
 	len = ft_lstsize(*a);
-	ft_sorting(a);
+	indexing(a);
 	if (!ft_is_sorted(*a))
 	{
 		if (len <= 400)

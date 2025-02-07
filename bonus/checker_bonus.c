@@ -4,13 +4,23 @@
 /*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ybenchel <ybenchel@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
+/*                                                +#+#+#+#+#+ +#+           */
 /*   Created: 2025/01/30 15:38:04 by ybenchel          #+#    #+#             */
-/*   Updated: 2025/01/31 19:52:15 by ybenchel         ###   ########.fr       */
+/*   Updated: 2025/02/01 16:22:58 by ybenchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
+
+void	for_free(t_list **a, t_list **b, char *line)
+{
+	get_next_line(16);
+	free(line);
+	ft_lstclear(a);
+	ft_lstclear(b);
+	write(2, "Error\n", 6);
+	exit(1);
+}
 
 void	ft_e_error(t_list **stack_a)
 {
@@ -43,6 +53,8 @@ void	process_command(char *line, t_list **a, t_list **b)
 		rra(a, 0);
 	else if (ft_strcmp(line, "rrb\n") == 0)
 		rrb(b, 0);
+	else
+		for_free(a, b, line);
 }
 
 void	ft_make_sure(t_list **a, t_list **b)

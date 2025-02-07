@@ -6,7 +6,7 @@
 /*   By: ybenchel <ybenchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 11:42:02 by ybenchel          #+#    #+#             */
-/*   Updated: 2025/01/30 16:57:04 by ybenchel         ###   ########.fr       */
+/*   Updated: 2025/02/03 11:22:26 by ybenchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,18 +74,18 @@ void	push_to_b(t_list **s_a, t_list **s_b, int p)
 }
 
 void	rotate_stack_b(t_list **stack_b, int highest_idx,
-		int highest_idx_m_1)
+		int second_highest_idx)
 {
 	if (find_distance(stack_b, highest_idx) > ft_lstsize(*stack_b) / 2)
 	{
 		while ((*stack_b)->index != highest_idx
-			&& (*stack_b)->index != highest_idx_m_1)
+			&& (*stack_b)->index != second_highest_idx)
 			rrb(stack_b, 1);
 	}
 	else
 	{
 		while ((*stack_b)->index != highest_idx
-			&& (*stack_b)->index != highest_idx_m_1)
+			&& (*stack_b)->index != second_highest_idx)
 			rb(stack_b, 1);
 	}
 }
@@ -93,17 +93,17 @@ void	rotate_stack_b(t_list **stack_b, int highest_idx,
 void	push_to_a(t_list **stack_a, t_list **stack_b)
 {
 	int		highest_idx;
-	int		highest_idx_m_1;
+	int		second_highest_idx;
 
 	while (*stack_b)
 	{
-		highest_idx = highest_index(*stack_b);
-		highest_idx_m_1 = highest_idx - 1;
+		highest_idx = max_index(*stack_b);
+		second_highest_idx = highest_idx - 1;
 		if ((*stack_b)->index == highest_idx
-			|| (*stack_b)->index == highest_idx_m_1)
+			|| (*stack_b)->index == second_highest_idx)
 			pa(stack_a, stack_b, 1);
 		else
-			rotate_stack_b(stack_b, highest_idx, highest_idx_m_1);
+			rotate_stack_b(stack_b, highest_idx, second_highest_idx);
 		if (ft_lstsize(*stack_a) > 1
 			&& (*stack_a)->index > (*stack_a)->next->index)
 			sa(stack_a, 1);

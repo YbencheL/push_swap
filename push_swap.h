@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <limits.h>
+# include <stdio.h>
 
 typedef struct s_list
 {
@@ -61,9 +62,8 @@ void				ft_sort(t_list **a, t_list **b);
 void				ft_sort_3(t_list **a);
 void				ft_sort_5(t_list **a, t_list **b);
 int					ft_lstsize(t_list *lst);
-void				ft_sorting(t_list **a);
-t_list				*ft_lstlast(t_list *lst);
-int					highest_index(t_list *stack);
+void				indexing(t_list **a);
+int					max_index(t_list *stack);
 int					find_distance(t_list **stack, int pos);
 int					find_first_index(t_list *head, int i, int p);
 int					ft_is_sorted(t_list *head);

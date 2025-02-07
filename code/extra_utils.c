@@ -6,13 +6,13 @@
 /*   By: ybenchel <ybenchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 13:58:06 by ybenchel          #+#    #+#             */
-/*   Updated: 2025/01/31 19:52:35 by ybenchel         ###   ########.fr       */
+/*   Updated: 2025/02/03 11:19:59 by ybenchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	ft_sorting(t_list **a)
+void	indexing(t_list **a)
 {
 	t_list	*tmp;
 	t_list	*top;
@@ -65,7 +65,7 @@ int	ft_max(t_list *head)
 	return (result);
 }
 
-int	highest_index(t_list *stack)
+int	max_index(t_list *stack)
 {
 	int	highest;
 

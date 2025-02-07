@@ -6,12 +6,11 @@
 /*   By: ybenchel <ybenchel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 17:56:21 by ybenchel          #+#    #+#             */
-/*   Updated: 2025/01/31 10:08:21 by ybenchel         ###   ########.fr       */
+/*   Updated: 2025/02/01 16:36:54 by ybenchel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
-#include <limits.h>
 
 static int	skip_ws_and_s(const char *str, int *sign)
 {
