@@ -74,9 +74,9 @@ typedef struct s_list
 
 I implemented different sorting strategies based on the size of the input:
 
-For 3 numbers: Custom algorithm using maximum 2-3 operations
-For 5 numbers: Optimized algorithm using helper functions
-For larger sets: Implemented an efficient algorithm using chunks
+For 3 numbers: Custom algorithm using maximum 2-3 operations.
+For 5 numbers: Optimized algorithm using the previous sorting 3 function functions.
+For larger sets: Implemented an efficient algorithm using chunks creating two function push to b and push to a pushing all numbers that belong to the smallest range first then pushing back the largest or second to largest numbers back to stack .
 
 ### Installation
 
