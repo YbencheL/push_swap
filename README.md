@@ -45,6 +45,7 @@ typedef struct s_list
 
 ### Available Operations
 
+
 **sa**: Swap the first two elements of stack A
 
 **sb**: Swap the first two elements of stack B*
